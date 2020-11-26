@@ -1,7 +1,9 @@
 const express = require('express');
+const cors = require('cors');
 const movies = require('./movies-min.json');
 
 const app = express();
+app.use(cors());
 
 app.get('/movies', (req, res) => {
   (async () => {
